@@ -1,15 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
-
 html, body {
-    font-family: Roboto;
+  font-family: Roboto;
 }
 
 .centralizado {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .center {
-    text-align: center;
+  text-align: center;
 }

@@ -1,10 +1,9 @@
-#enema {
-    .left {
-        width: 60%;
-    }
-    .right {
-        width: 40%;
-    }
+#enema .left {
+  width: 60%;
+}
+
+#enema .right {
+  width: 40%;
 }
 
 .int {
