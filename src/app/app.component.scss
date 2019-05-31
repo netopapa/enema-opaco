@@ -1,26 +1,116 @@
-#enema {
-    .left {
-        width: 60%;
-    }
-    .right {
-        width: 40%;
-    }
-}
-
-.int {
-  background-position: 0 center;
+#header {
+  height: 100vh;
+  background-image: url("/assets/radiologia.jpg");
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  width: 100%;
-  height: 470px;
-  display: block;
-  margin: 0 auto;
+  background-position: center 100%;
+  background-size: cover;
+
+  .pelicula {
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100%;
+
+    h1 {
+      opacity: 0;
+      font-weight: 700;
+      color: #fff;
+      margin: 0 10px;
+      animation-delay: 1s;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+
+      &.text-enema {
+        animation-name: enema;
+      }
+
+      &.text-opaco {
+        animation-name: opaco;
+      }
+    }
+  }
 }
 
-.int1 {
-  background-image: url("/assets/intestino.png");
+#doencas {
+  .card-image {
+    height: 290px;
+    background-position: center;
+    background-size: cover;
+
+    &.megacolon {
+      background-image: url("/assets/megacolon.jpg");
+    }
+
+    &.diverticulite {
+      background-image: url("/assets/diverticulite.jpg");
+    }
+
+    &.cancer {
+      background-image: url("/assets/cancer-colateral.jpg");
+      background-position: 100% !important;
+    }
+  }
 }
 
-.int2 {
-  background-image: url("/assets/intestino2.png");
+#exame {
+  .int {
+    background-position: 25%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    background-size: 270px;
+    height: 190px;
+  }
+
+  .int1 {
+    background-image: url("/assets/intestino.png");
+  }
+
+  .int2 {
+    background-image: url("/assets/intestino2.png");
+  }
+}
+
+@keyframes enema {
+  0% {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+
+  50% {
+    opacity: 0.35;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+footer {
+  background-color: #221d65;
+
+  * {
+    color: #fff;
+  }
+
+  .insta {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
+@keyframes opaco {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+
+  50% {
+    opacity: 0.35;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
